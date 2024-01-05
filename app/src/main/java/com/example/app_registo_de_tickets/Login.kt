@@ -15,4 +15,11 @@ class Login : AppCompatActivity() {
 
         startActivity(intent)
     }
+
+
+    fun navegarParaHomepage(view: View) {
+        val intent = Intent(this, Homepage::class.java)
+
+        startActivity(intent)
+    }
 }
