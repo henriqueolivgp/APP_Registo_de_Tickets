@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class Login : AppCompatActivity() {
+class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_register)
     }
-    fun navegarParaRegister(view: View) {
-        val intent = Intent(this, Register::class.java)
-
+    fun navegarParaCriar(view: View) {
+        val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
 }
