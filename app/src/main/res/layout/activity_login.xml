@@ -19,8 +19,11 @@
     android:text="Login"
     android:id="@+id/textView3"
     android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true" />
-<TextView
+    android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp"
+        />
+
+    <TextView
     android:id="@+id/tv_userName"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -46,6 +49,7 @@
     android:layout_marginTop="200dp"
     android:layout_toRightOf="@+id/tv_userName"
     android:hint="User Name" />
+
 <EditText
     android:layout_width="fill_parent"
     android:layout_height="40dp"
