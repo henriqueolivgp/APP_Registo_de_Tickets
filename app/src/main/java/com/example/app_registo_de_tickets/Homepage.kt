@@ -8,23 +8,20 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 
 class Homepage : AppCompatActivity() {
+
+    private lateinit var btnInsertData: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
 
-      /*  if (savedInstanceState == null) {
-            val fragment = PrimeiroFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit()
-        }*/
+        btnInsertData= findViewById(R.id.btnInsertData)
 
+        btnInsertData.setOnClickListener{
+            val intent = Intent(this, InsertionActivity::class.java)
+            startActivity(intent)
+        }
     }
-    fun navegarParaHistory(view: View) {
-        val intent = Intent(this, History::class.java)
 
-        startActivity(intent)
-    }
     fun navegarParaPerfil(view: View) {
         val intent = Intent(this, Profile::class.java)
 
