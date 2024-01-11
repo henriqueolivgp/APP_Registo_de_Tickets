@@ -1,5 +1,6 @@
 package com.example.app_registo_de_tickets
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -49,6 +50,21 @@ class FetchingActivity : AppCompatActivity() {
                     }
                     val mAdapter = EmpAdapter(empList)
                     empRecyclerView.adapter = mAdapter
+
+                    mAdapter.setOnItemClickListener(object: EmpAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent= Intent(this@FetchingActivity,TicketsDetailsActivity::class.java)
+
+                            intent.putExtra("empId",empList[position].empId)
+                            intent.putExtra("empName",empList[position].empName)
+                            intent.putExtra("empLocalizacao",empList[position].empLocalizacao)
+                            intent.putExtra("empProblem",empList[position].empProblem)
+
+                            startActivity(intent)
+
+                        }
+
+                    })
 
                     empRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
