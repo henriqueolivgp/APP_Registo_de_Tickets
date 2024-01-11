@@ -13,19 +13,27 @@
         android:theme="@style/Theme.APP_Registo_de_Tickets"
         tools:targetApi="31">
         <activity
+            android:name=".TicketsDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FetchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsertionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".History"
             android:exported="false"
-            android:label="@string/title_activity_history"
             android:theme="@style/Theme.APP_Registo_de_Tickets" />
-        <activity
-            android:name=".Homepage2"
-            android:exported="false" />
-        <activity
-            android:name=".Perfil"
-            android:exported="false" />
         <activity
             android:name=".Homepage"
             android:exported="false" />

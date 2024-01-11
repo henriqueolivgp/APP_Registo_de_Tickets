@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun navegarParaLogin(view: View) {
-        val intent = Intent(this, Login::class.java)
+        val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
     }
 }
