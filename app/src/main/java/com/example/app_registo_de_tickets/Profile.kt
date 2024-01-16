@@ -1,6 +1,7 @@
 package com.example.app_registo_de_tickets
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,6 +27,16 @@ class Profile : AppCompatActivity() {
     }
     fun navegarParaHistory(view: View) {
         val intent = Intent(this, History::class.java)
+
+        startActivity(intent)
+    }
+    fun navegarParaUsers(view: View) {
+        val intent = Intent(this, History::class.java)
+
+        startActivity(intent)
+    }
+    fun navegarParaData(view: View) {
+        val intent = Intent(this, EditProfile::class.java)
 
         startActivity(intent)
     }
