@@ -15,7 +15,6 @@ class TicketsDetailsActivity : AppCompatActivity() {
     private lateinit var tvEmpLocalizacao: TextView
     private lateinit var tvEmpProblem: TextView
     private lateinit var btnUpdate: Button
-    private lateinit var btnDelete: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
