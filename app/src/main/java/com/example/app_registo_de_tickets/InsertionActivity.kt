@@ -30,6 +30,8 @@ class InsertionActivity : AppCompatActivity() {
         btnSaveData.setOnClickListener {
             saveTicketsData()
         }
+
+
     }
 
     private fun saveTicketsData() {
