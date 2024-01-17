@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
     fun navegarParaLogin(view: View) {
         val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
