@@ -108,7 +108,7 @@ class EditProfile : AppCompatActivity() {
         databaseReference.child(userId).setValue(profile)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data updated successfully", Toast.LENGTH_LONG).show()
-                finish()
+                navigateToProfilePage()
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
@@ -120,7 +120,7 @@ class EditProfile : AppCompatActivity() {
         databaseReference.child(userId).setValue(profile)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
-                finish()
+                navigateToProfilePage()
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }

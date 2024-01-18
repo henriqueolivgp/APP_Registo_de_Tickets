@@ -8,20 +8,22 @@
 
     <EditText
         android:id="@+id/etEmpProfileName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/LoginTextInputInnerFieldStyle"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Introduza o Nome"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etEmpLocalidade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/LoginTextInputInnerFieldStyle"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -32,8 +34,9 @@
 
     <EditText
         android:id="@+id/etEmpContacto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/LoginTextInputInnerFieldStyle"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
