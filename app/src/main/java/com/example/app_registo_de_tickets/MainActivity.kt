@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // Start the Runnable to navigate after 3 seconds
-        handler.postDelayed(runnable, 3000)
+        handler.postDelayed(runnable, 1000)
     }
 
     override fun onPause() {

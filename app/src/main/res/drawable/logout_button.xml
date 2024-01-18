@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drawable na parte inferior -->
+    <item android:drawable="@drawable/background_plus_button" />
+    <!-- Drawable superior (será sobreposto ao inferior) -->
+    <item android:drawable="@drawable/baseline_exit_to_app_24"/>
+</layer-list>
