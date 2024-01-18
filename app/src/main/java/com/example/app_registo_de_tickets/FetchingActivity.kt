@@ -55,6 +55,7 @@ class FetchingActivity : AppCompatActivity() {
                         override fun onItemClick(position: Int) {
                             val intent= Intent(this@FetchingActivity,TicketsDetailsActivity::class.java)
 
+                            intent.putExtra("empIdUser",empList[position].empIdUser)
                             intent.putExtra("empId",empList[position].empId)
                             intent.putExtra("empName",empList[position].empName)
                             intent.putExtra("empLocalizacao",empList[position].empLocalizacao)

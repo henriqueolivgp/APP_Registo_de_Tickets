@@ -11,6 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class InsertionActivity : AppCompatActivity() {
 
+
     private lateinit var etEmpName: EditText
     private lateinit var etEmpLocalizacao: EditText
     private lateinit var etEmpProblem: EditText
@@ -41,18 +42,18 @@ class InsertionActivity : AppCompatActivity() {
             if (empLocalizacao.isEmpty() || empProblem.isEmpty() || empName.isEmpty()) {
                 return@setOnClickListener
             }
-
+            val empId = dbRef.push().key!!
             if (userId != null) {
-                saveTicketsData(userId!!, empName, empLocalizacao,empProblem)
+                saveTicketsData(userId!!,empId, empName, empLocalizacao,empProblem)
             } else {
                 Toast.makeText(this, "User not authenticated", Toast.LENGTH_LONG).show()
             }
         }
     }
 
-    private fun saveTicketsData(userId : String, empName : String, empLocalizacao: String, empProblem : String) {
+    private fun saveTicketsData(userId : String, empId : String ,  empName : String, empLocalizacao: String, empProblem : String) {
 
-        val employee = TicketsModel(userId, empName, empLocalizacao, empProblem)
+        val employee = TicketsModel(userId, empId, empName, empLocalizacao, empProblem)
 
         dbRef.child(userId).setValue(employee)
             .addOnCompleteListener {
