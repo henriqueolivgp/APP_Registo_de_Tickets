@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -14,6 +15,8 @@ class InsertionActivity : AppCompatActivity() {
     private lateinit var etEmpLocalizacao: EditText
     private lateinit var etEmpProblem: EditText
     private lateinit var btnSaveData: Button
+    private lateinit var auth: FirebaseAuth
+    private var userId: String? = null
 
     private lateinit var dbRef: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,42 +29,35 @@ class InsertionActivity : AppCompatActivity() {
         btnSaveData = findViewById(R.id.btnSave)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Tickets")
+        auth = FirebaseAuth.getInstance()
+        userId = auth.currentUser?.uid
+
 
         btnSaveData.setOnClickListener {
-            saveTicketsData()
+            val empName = etEmpName.text.toString()
+            val empLocalizacao = etEmpLocalizacao.text.toString()
+            val empProblem = etEmpProblem.text.toString()
+
+            if (empLocalizacao.isEmpty() || empProblem.isEmpty() || empName.isEmpty()) {
+                return@setOnClickListener
+            }
+
+            if (userId != null) {
+                saveTicketsData(userId!!, empName, empLocalizacao,empProblem)
+            } else {
+                Toast.makeText(this, "User not authenticated", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
-    private fun saveTicketsData() {
+    private fun saveTicketsData(userId : String, empName : String, empLocalizacao: String, empProblem : String) {
 
-        //getting values
-        val empName = etEmpName.text.toString()
-        val empLocalizacao = etEmpLocalizacao.text.toString()
-        val empProblem = etEmpProblem.text.toString()
+        val employee = TicketsModel(userId, empName, empLocalizacao, empProblem)
 
-        if (empName.isEmpty()) {
-            etEmpName.error = "Introduza o nome da empresa"
-        }
-        if (empLocalizacao.isEmpty()) {
-            etEmpLocalizacao.error = "Introduza a localizacao da empresa"
-        }
-        if (empProblem.isEmpty()) {
-            etEmpProblem.error = "Introduza o problema"
-        }
-
-        val empId = dbRef.push().key!!
-
-        val employee = TicketsModel(empId, empName, empLocalizacao, empProblem)
-
-        dbRef.child(empId).setValue(employee)
+        dbRef.child(userId).setValue(employee)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
-
-                etEmpName.text.clear()
-                etEmpLocalizacao.text.clear()
-                etEmpProblem.text.clear()
-
-
+                finish()
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
