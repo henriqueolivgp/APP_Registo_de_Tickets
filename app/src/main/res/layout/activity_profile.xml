@@ -7,13 +7,12 @@
     tools:context=".Profile">
 
     <TextView
-        android:id="@+id/textViewLogin"
+        android:id="@+id/etEmpProfileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-
         android:gravity="center"
-        android:text="Perfil"
+        android:text=""
         android:textSize="30dp"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmpProfileName" />
 
     <TextView
         android:id="@+id/textButtonHistorico"

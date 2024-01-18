@@ -67,7 +67,7 @@ class History : AppCompatActivity() {
 
                 mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener {
                     override fun onItemClick(position: Int) {
-                        val intent = Intent(this@History, HistoryDetailsDetails::class.java)
+                        val intent = Intent(this@History, HistoryDetails::class.java)
 
                         intent.putExtra("empName", empList[position].empName)
                         intent.putExtra("empLocalizacao", empList[position].empLocalizacao)
