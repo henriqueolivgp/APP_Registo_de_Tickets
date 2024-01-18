@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Homepage">
 
-
     <Button
         android:id="@+id/btnInsertData"
         android:layout_width="72dp"
@@ -21,13 +20,10 @@
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="wrap_content"
-        app:layout_constraintTop_toTopOf="wrap_content"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
-        android:id="@+id/buttonProfile"
+        android:id="@+id/etEmpProfileName"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -37,18 +33,15 @@
         app:icon="@drawable/ic_profile_foreground"
         app:iconGravity="start|end"
         app:iconSize="35dp"
-        app:layout_constraintBottom_toBottomOf="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
 
     <Button
         android:id="@+id/btnFetchData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fetch Data"
+        android:text="Ver Tickets"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
