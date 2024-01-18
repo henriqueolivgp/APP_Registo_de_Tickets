@@ -59,4 +59,6 @@ dependencies {
 
     // dependência do RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    
 }
