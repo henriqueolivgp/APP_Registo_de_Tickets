@@ -25,7 +25,7 @@
         android:id="@+id/tvLoadingData"
         android:layout_width="60dp"
         android:layout_height="82dp"
-        android:text="Loading Data....."
+        android:text="Loading Data..."
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"

@@ -48,7 +48,7 @@ class History : AppCompatActivity() {
         empRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        val ticketsReference = dbRef.orderByChild("empId").equalTo(userId)
+        val ticketsReference = dbRef.orderByChild("empIdUser").equalTo(userId)
 
         ticketsReference.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

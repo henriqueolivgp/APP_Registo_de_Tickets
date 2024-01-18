@@ -65,7 +65,7 @@ class Profile : AppCompatActivity() {
         databaseReference.child(userId).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val userProfile = snapshot.getValue(ProfileModel::class.java)
-                val welcomeMessage = "Welcome, ${userProfile?.empProfileName}!"
+                val welcomeMessage = "${userProfile?.empProfileName}!"
                 etEmpProfileName.text = welcomeMessage
             }
 
