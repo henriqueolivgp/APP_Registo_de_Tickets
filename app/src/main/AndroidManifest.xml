@@ -16,6 +16,9 @@
             android:name=".TicketsDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".HistoryDetails"
+            android:exported="false" />
+        <activity
             android:name=".FetchingActivity"
             android:exported="false" />
         <activity
