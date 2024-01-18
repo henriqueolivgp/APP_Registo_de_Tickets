@@ -49,6 +49,8 @@ class InsertionActivity : AppCompatActivity() {
                 Toast.makeText(this, "User not authenticated", Toast.LENGTH_LONG).show()
             }
         }
+
+
     }
 
     private fun saveTicketsData(userId : String, empId : String ,  empName : String, empLocalizacao: String, empProblem : String) {
