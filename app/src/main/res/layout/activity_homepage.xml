@@ -9,31 +9,40 @@
 
     <Button
         android:id="@+id/btnInsertData"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="40dp"
-        app:icon="@android:drawable/ic_menu_add"
-
-        app:iconSize="40dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_plus_button"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="#000000"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="wrap_content"
+        app:layout_constraintTop_toTopOf="wrap_content"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonProfile"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:onClick="navegarParaPerfil"
         android:text="Perfil"
         app:icon="@drawable/ic_profile_foreground"
         app:iconGravity="start|end"
         app:iconSize="35dp"
+        app:layout_constraintBottom_toBottomOf="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <Button
         android:id="@+id/btnFetchData"
@@ -43,6 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
